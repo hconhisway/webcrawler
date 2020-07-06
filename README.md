@@ -1,11 +1,114 @@
-<!--
- * @Author: your name
- * @Date: 2020-07-06 20:47:56
- * @LastEditTime: 2020-07-06 21:21:35
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: \webcrawler-1\README.md
---> 
-# webcrawler
-## 爬虫课程作业
-- 第一次课的内容23
+# WebCrawler.绪论
+### 考核方式
+
+- 设计一个爬虫
+- 学号-姓名-专业
+  - 报告，作业
+
+### 爬虫的介绍
+
+- 网络爬虫，是一种按照一定的规则，自动地抓取万维网信息的程序或脚本。
+- 在万维网高速发展的时代，从网页中获取数据和信息非常重要。网络爬虫是一种很有用的工具
+
+
+
+### definition
+
+- Many names：
+
+  - Crawler
+  - spider
+  - Robot（or bot）
+  - Web agent
+  - Wanderer，worm，...
+
+- famous instances
+
+  - googlebot，scooter，slurp，msnbot，...
+
+- 注：数据集中的数据是经过爬取、处理、清洗的。后两者是必要的步骤
+
+- <img src="C:\Users\hconh\AppData\Roaming\Typora\typora-user-images\image-20200706224812593.png" alt="image-20200706224812593" style="zoom:80%;" />
+
+- 网页中的内容：标签和内容
+
+  - 爬虫需要对源代码进行解析，去除标签。
+
+- 爬虫从若干个url（种子）开始
+
+  - 然后不断链接其他的url，进行数据爬取
+  - 对网页进行解析，把其中的url都抽取出来，放入队列
+  - 直到满足系统的一定停止条件
+
+- 网页爬取算法
+
+  - 从已知种子URL开始，放入url队列
+  - 从url队列中取出url获取对应网页内容p
+  - 对网页p进行解析，
+    - 获得内容     *如何处理？*
+    - 获取超级链接，放入URL队列   
+      - *何种遍历方式？*
+      - *URL查重问题？*
+  - 转入step2
+    - *如何设置终止条件？*
+    - *分布式爬虫？*
+
+  ### 法律问题
+
+  - 法律风险
+    - 为违法违规组织提供爬虫服务（验证码识别，SEO）
+    - 个人隐私数据抓取与贩卖
+    - 利用无版权商业数据获利
+  - 合法操作
+    - 经网站允许
+      - robots协议
+      - 无反爬策略
+    - 数据用途合法
+    - 保护个人信息（消隐处理）
+
+  ### 爬虫APP
+
+  - 具有爬虫功能的软件
+    - excel2013
+    - GOOGLE SHEET
+  - 开源爬虫
+    - JAVA:WebCollector，Heritrix，Nutch
+    - C/C++：larbin
+    - Python：pyspider，scrapy
+  - You-Get
+    - 命令行形式的工具，不提供软件界面
+    - 支持多个视频网站和音乐网站
+  - 八爪鱼采集器（有模板，针对反趴策略，付费）
+  - 集搜客GooSeeker
+  - 后羿采集器（小说推荐）
+    - 自动识别表格
+    - 深入采集
+
+  ### PYTHON基础
+
+  - 略
+
+  ### urllib
+
+  - 包含了四个模块
+    - urllib.request 可以用来发送request和获取request的结果
+    - urllib.error包含了urllib.request产生的异常
+    - urllib.parse用来解析和处理url
+    - urllib.robotparse用来解析页面的robots.txt文件
+
+  - <img src="C:\Users\hconh\AppData\Roaming\Typora\typora-user-images\image-20200706233209095.png" alt="image-20200706233209095" style="zoom:67%;" />
+
+  - <img src="C:\Users\hconh\AppData\Roaming\Typora\typora-user-images\image-20200706233717875.png" alt="image-20200706233717875" style="zoom:67%;" />
+
+
+
+
+
+
+
+
+
+
+
+
+
