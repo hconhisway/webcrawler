@@ -1,7 +1,6 @@
 '''
-@Author: 韩畅
-@Date: 2020-07-06 20:47:56
-@LastEditTime: 2020-07-08 11:39:06
+@Author: hanchang
+@LastModifiedBy: hanchang
 '''
 import urllib.request
 url = "http://www.baidu.com"

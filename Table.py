@@ -1,9 +1,7 @@
 '''
-@Author: 韩畅
-@Date: 2020-07-07 11:22:51
-@LastEditTime: 2020-07-07 18:31:55
+@Author: hanchang
+@LastModifiedBy: hanchang
 '''
-
 import pandas as pda
 import urllib.request
 url = "http://www.maigoo.com/news/463071.html"

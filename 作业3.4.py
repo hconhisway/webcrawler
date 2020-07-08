@@ -1,8 +1,6 @@
 '''
-@Author: 韩畅
-@Date: 2020-07-08 11:38:17
-@LastEditTime: 2020-07-08 11:50:41
-@LastEditors: Please set LastEditors
+@Author: hanchang
+@LastModifiedBy: hanchang
 '''
 import pandas as pda
 import csv
