@@ -1,8 +1,7 @@
 '''
 @Author: 韩畅
 @Date: 2020-07-06 20:47:56
-@LastEditTime: 2020-07-07 11:23:27
-@LastEditors: Please set LastEditors
+@LastEditTime: 2020-07-08 11:39:06
 '''
 import urllib.request
 url = "http://www.baidu.com"
