@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Define here the models for your spider middleware
+# Define here the models for your spider middleware 和请求/响应处理相关联的框架
 #
 # See documentation in:
 # https://docs.scrapy.org/en/latest/topics/spider-middleware.html

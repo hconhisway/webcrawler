@@ -1,3 +1,7 @@
+'''
+@Author: hanchang
+@LastModifiedBy: hanchang
+'''
 # -*- coding: utf-8 -*-
 
 # Scrapy settings for wxz project
@@ -19,7 +23,7 @@ NEWSPIDER_MODULE = 'wxz.spiders'
 #USER_AGENT = 'wxz (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
