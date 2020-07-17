@@ -2,6 +2,10 @@
 @Author: hanchang
 @LastModifiedBy: hanchang
 '''
+'''
+@Author: hanchang
+@LastModifiedBy: hanchang
+'''
 import pandas as pda
 import urllib.request
 url = "http://www.maigoo.com/news/463071.html"
@@ -11,7 +15,6 @@ pda.set_option('display.max_rows',None)#加入这一行设置可以解决行之�
 x=contents[0]
 #print(contents)
 contents.append('0')
-x = x + '加上的'
 x.to_csv('3.csv')
 b = '23333'
 print(b[0])
