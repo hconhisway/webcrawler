@@ -9,9 +9,7 @@
             "name": "core_dynamics_pack",
             "fn": {
                 "b": [{"function_type":"MODULE","gromet_type":"GrometBoxFunction","name":"module","metadata":3}],
-                "bf": [
-                    {"function_type":"FUNCTION","body":1,"metadata":5}
-                ],
+                "bf": [{"function_type":"FUNCTION","body":1,"metadata":5}],
                 "gromet_type": "GrometFN"
             },
             "fn_array": [
