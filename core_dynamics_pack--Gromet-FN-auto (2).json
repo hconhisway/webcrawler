@@ -10,6 +10,8 @@
             "fn": {
                 "b": [{"function_type":"MODULE","gromet_type":"GrometBoxFunction","name":"module","metadata":3}],
                 "bf": [{"function_type":"FUNCTION","body":1,"metadata":5}],
+                "pif": [{"id":1,"box":1}],
+                "pof": [{"id":1,"box":1}],
                 "gromet_type": "GrometFN"
             },
             "fn_array": [
