@@ -10,9 +10,29 @@ class TreeSplitter {
   }
 
   hierarchy(data, options, rootOnly) {
-    // Assuming hierarchy is a function defined elsewhere
-    // Replace this with the actual implementation or import
-    return hierarchy(data, options, rootOnly);
+    options = util.assign({}, DEFAULT_OPTIONS, options);
+    const root = new Node(data, options);
+    const nodes = [ root ];
+    let node;
+    if (!isolated && !data.collapsed) {
+      while (node = nodes.shift()) {
+        if (!node.data.collapsed) {
+          const children = options.getChildren(node.data);
+          const length = children ? children.length : 0;
+          node.children = new Array(length);
+          if (children && length) {
+            for (let i = 0; i < length; i++) {
+              const child = new Node(children[i], options);
+              node.children[i] = child;
+              nodes.push(child);
+              child.parent = node;
+              child.depth = node.depth + 1;
+            }
+          }
+        }
+      }
+    }
+    return root;
   }
 
   getSide(child, index) {
