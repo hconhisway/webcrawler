@@ -1,0 +1,55 @@
+class TreeSplitter {
+  constructor(root, options) {
+    this.root = root;
+    this.options = options;
+    this.left = this.hierarchy(root.data, options, true);
+    this.right = this.hierarchy(root.data, options, true);
+    this.treeSize = root.children.length;
+    this.rightTreeSize = Math.round(this.treeSize / 2);
+    this.splitTrees();
+  }
+
+  hierarchy(data, options, rootOnly) {
+    // Assuming hierarchy is a function defined elsewhere
+    // Replace this with the actual implementation or import
+    return hierarchy(data, options, rootOnly);
+  }
+
+  getSide(child, index) {
+    if (this.options.getSide) {
+      return this.options.getSide(child, index);
+    }
+    return index < this.rightTreeSize ? 'right' : 'left';
+  }
+
+  splitTrees() {
+    for (let i = 0; i < this.treeSize; i++) {
+      const child = this.root.children[i];
+      const side = this.getSide(child, i);
+      if (side === 'right') {
+        this.right.children.push(child);
+      } else {
+        this.left.children.push(child);
+      }
+    }
+    this.assignSide(this.left, 'left');
+    this.assignSide(this.right, 'right');
+  }
+
+  assignSide(tree, side) {
+    tree.eachNode(node => {
+      if (!node.isRoot()) {
+        node.side = side;
+      }
+    });
+  }
+
+  getTrees() {
+    return {
+      left: this.left,
+      right: this.right
+    };
+  }
+}
+
+module.exports = TreeSplitter;
